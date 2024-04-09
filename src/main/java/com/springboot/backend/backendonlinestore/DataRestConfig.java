@@ -7,12 +7,14 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 import com.springboot.backend.backendonlinestore.entities.Product;
 
+import ch.qos.logback.core.net.server.Client;
+
 @Configuration
 public class DataRestConfig implements RepositoryRestConfigurer{
 
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
-        config.exposeIdsFor(Product.class);
+        config.exposeIdsFor(Product.class, Client.class);
     }
     
 }

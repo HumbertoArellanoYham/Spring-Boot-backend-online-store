@@ -6,4 +6,5 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import com.springboot.backend.backendonlinestore.entities.Product;
 
 @RepositoryRestResource(path = "productos")
-public interface ProductRepository extends CrudRepository<Product, Integer> { }
+public interface ProductRepository extends CrudRepository<Product, Integer> { 
+}
